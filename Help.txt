@@ -1,0 +1,34 @@
+Thanks for downloading Volterra!
+
+
+Installation Steps:
+
+1. Install Csound from the folder entitled "Csound Install"
+*SKIP THIS STEP IF CSOUND IS ALREADY INSTALLED ON YOUR SYSTEM*
+
+2. Copy the file entitled "Volterra.vst3" to your default VST3 folder (typically found at "C:\Program Files\Common Files\VST3" on Windows)
+
+3. Copy the file entitled "Volterra.dll" to your default VST folder (typically found at "C:\Program Files\Common Files\VST2" on Windows) 
+
+4. Re-scan plugins in your DAW of choice
+
+
+
+
+User Guide:
+
+The Volterra plugin uses both audio and MIDI input, so when first launched in your DAW, place the Volterra plugin onto an audio track, and route MIDI input into this audio track.
+
+Once routing has been completed, open the Volterra plugin.
+
+
+
+Survey:
+After you have tried Volterra, please fill out the short survey found by clicking the "survey" button in the bottom right of the plugin GUI.
+
+If this button isn't working, you can also access the survey via the following link:
+https://forms.office.com/e/1c3rFN3DPQ
+
+
+
+
