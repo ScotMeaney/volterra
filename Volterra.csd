@@ -1,53 +1,61 @@
 <Cabbage>
-form caption("VOLTERRA") guiMode("queue") size(825, 600), pluginId("Volt") colour ("Grey"), bundle(".Assets")
+form caption("VOLTERRA") guiMode("queue") size(825, 600), pluginId("Volt") colour ("Grey") bundle("./Assets")
 
 ;BACKGROUND IMAGE
-image bounds(-1,-1,827,602) channel("image1"), file("background.png")
+image bounds(-1,-1,827,602) channel("image1"), file("./Assets/background.png")
 
 ;ARP PARAMETRES
 ;rslider bounds(10, 10, 60, 60) channel("HOST_BPM") range(1, 300, 120, 1,1) filmstrip("Red_Pot.png", 128)
-button bounds(65, 458, 58, 58) channel("ArpButton") text ("")imgFile("off", "Switch_Off.png"), imgFile("on", "Switch_On.png")
-rslider bounds(105, 459, 60, 60) channel("ArpSpeed") range(1, 4, 1, 1, 1) filmstrip("Grey_Pot.png", 128)
-image bounds(168, 90, 40, 20) channel("Arp_Label"), file("ARP_STICKER.png"), alpha (0)
+image bounds(168, 90, 40, 20) channel("Arp_Label"), file("./Assets/ARP_STICKER.png"), alpha (0)
+combobox bounds(70, 89, 90, 25), mode("resize"), value(3), alpha(0)
 
-rslider bounds(668, 384, 80, 80) channel("ReverbMasterVol") range(0, 1, 0, 1, 0.1) filmstrip("Yellow_Pot.png", 128)
+infobutton bounds(683, 466, 52,16) file("./Assets/Volterra Info Sheet.png") imgFile("off", "./Assets/Info Button.svg"), imgFile("on", "./Assets/Info Button.svg")
 
-infobutton bounds(680, 464, 56,19) file("Volterra Info Sheet.png") alpha(0)
+rslider bounds(86, 302, 60, 60) channel("DryInputPan") range(0, 1, 0.5, 1, 0.001) filmstrip("./Assets/Red_Pot.png", 128)
+rslider bounds(86, 348, 60, 60) channel("DryInputFormant") range(-10, 10, 0, 1, 1) filmstrip("./Assets/Blue_Pot.png", 128)
+rslider bounds(86, 394, 60, 60) channel("DryInputRev") range(0, 1, 0, 1, 0.1) filmstrip("./Assets/Yellow_Pot.png", 128)
 
-infobutton bounds(680, 490, 56,19) file("https://forms.office.com/Pages/ResponsePage.aspx?id=e5V92hEVQkqy9Xj4R_jIer1ulwkuKCRJrVNTox-b2XJUQkhPVVZaS0ZTMVYyRTM1WTczM0JNMzJWUi4u") alpha(0)
+rslider bounds(218, 348, 60, 60) channel("Harm1Pan") range(0, 1, 0.25, 1, 0.001) filmstrip("./Assets/Red_Pot.png", 128)
+rslider bounds(218, 394, 60, 60) channel("Harm1Formant") range(-10, 10, 0, 1, 1) filmstrip("./Assets/Blue_Pot.png", 128)
+rslider bounds(218, 440, 60, 60) channel("Harm1Rev") range(0, 1, 0, 1, 0.1) filmstrip("./Assets/Yellow_Pot.png", 128)
 
-vslider bounds(95, 150, 50, 170) channel("DryInputVol") range(0, 2, 1, 1, 0.001) filmstrip("Fader.png", 201)
-rslider bounds(86, 302, 60, 60) channel("DryInputPan") range(0, 1, 0.5, 1, 0.001) filmstrip("Red_Pot.png", 128)
-rslider bounds(86, 348, 60, 60) channel("DryInputFormant") range(-10, 10, 0, 1, 1) filmstrip("Blue_Pot.png", 128)
-rslider bounds(86, 394, 60, 60) channel("DryInputRev") range(0, 1, 0, 1, 0.1) filmstrip("Yellow_Pot.png", 128)
+rslider bounds(328, 394, 60, 60) channel("Harm2Formant") range(-10, 10, 0, 1, 1) filmstrip("./Assets/Blue_Pot.png", 128)
+rslider bounds(328, 440, 60, 60) channel("Harm2Rev") range(0, 1, 0, 1, 0.1) filmstrip("./Assets/Yellow_Pot.png", 128)
+button bounds(329, 302, 59, 59) channel("ModeSwitch2") text ("")imgFile("off", "./Assets/Switch_Off.png"), imgFile("on", "./Assets/Switch_On.png")
 
-vslider bounds(227, 150, 50, 170) channel("Harm1Vol") range(0, 1, 0.5, 1, 0.001) filmstrip("Fader.png", 201)
-rslider bounds(218, 348, 60, 60) channel("Harm1Pan") range(0, 1, 0.25, 1, 0.001) filmstrip("Red_Pot.png", 128)
-rslider bounds(218, 394, 60, 60) channel("Harm1Formant") range(-10, 10, 0, 1, 1) filmstrip("Blue_Pot.png", 128)
-rslider bounds(218, 440, 60, 60) channel("Harm1Rev") range(0, 1, 0, 1, 0.1) filmstrip("Yellow_Pot.png", 128)
-button bounds(219, 302, 59, 59) channel("ModeSwitch1") text ("")imgFile("off", "Switch_Off.png"), imgFile("on", "Switch_On.png")
+rslider bounds(436, 348, 60, 60) channel("Harm3Pan") range(0, 1, 0, 1, 0.001) filmstrip("./Assets/Red_Pot.png", 128)
+rslider bounds(436, 440, 60, 60) channel("Harm3Rev") range(0, 1, 0, 1, 0.1) filmstrip("./Assets/Yellow_Pot.png", 128)
+button bounds(437, 302, 59, 59) channel("ModeSwitch3") text ("")imgFile("off", "./Assets/Switch_Off.png"), imgFile("on", "./Assets/Switch_On.png")
 
-vslider bounds(337, 150, 50, 170) channel("Harm2Vol") range(0, 1, 0.5, 1, 0.001) filmstrip("Fader.png", 201)
-rslider bounds(328, 348, 60, 60) channel("Harm2Pan") range(0, 1, 0.75, 1, 0.001) filmstrip("Red_Pot.png", 128)
-rslider bounds(328, 394, 60, 60) channel("Harm2Formant") range(-10, 10, 0, 1, 1) filmstrip("Blue_Pot.png", 128)
-rslider bounds(328, 440, 60, 60) channel("Harm2Rev") range(0, 1, 0, 1, 0.1) filmstrip("Yellow_Pot.png", 128)
-button bounds(329, 302, 59, 59) channel("ModeSwitch2") text ("")imgFile("off", "Switch_Off.png"), imgFile("on", "Switch_On.png")
+rslider bounds(546, 348, 60, 60) channel("Harm4Pan") range(0, 1, 1, 1, 0.001) filmstrip("./Assets/Red_Pot.png", 128)
+rslider bounds(546, 394, 60, 60) channel("Harm4Formant") range(-10, 10, 0, 1, 1) filmstrip("./Assets/Blue_Pot.png", 128)
+button bounds(547, 302, 59, 59) channel("ModeSwitch4") text ("")imgFile("off", "./Assets/Switch_Off.png"), imgFile("on", "./Assets/Switch_On.png")
 
-vslider bounds(446, 150, 50, 170) channel("Harm3Vol") range(0, 1, 0.5, 1, 0.001) filmstrip("Fader.png", 201)
-rslider bounds(436, 348, 60, 60) channel("Harm3Pan") range(0, 1, 0, 1, 0.001) filmstrip("Red_Pot.png", 128)
-rslider bounds(436, 394, 60, 60) channel("Harm3Formant") range(-10, 10, 0, 1, 1) filmstrip("Blue_Pot.png", 128)
-rslider bounds(436, 440, 60, 60) channel("Harm3Rev") range(0, 1, 0, 1, 0.1) filmstrip("Yellow_Pot.png", 128)
-button bounds(437, 302, 59, 59) channel("ModeSwitch3") text ("")imgFile("off", "Switch_Off.png"), imgFile("on", "Switch_On.png")
+image bounds(-1,-1,827,602) channel("BlackBox"), file("./Assets/Black Box.png"), alpha (0) mouseInteraction(0)
+image bounds(-1,-1,827,602) channel("HelpOverlay"), file("./Assets/Help Overlay.png"), alpha (0) mouseInteraction(0)
 
-vslider bounds(556, 150, 50, 170) channel("Harm4Vol") range(0, 1, 0.5, 1, 0.001) filmstrip("Fader.png", 201)
-rslider bounds(546, 348, 60, 60) channel("Harm4Pan") range(0, 1, 1, 1, 0.001) filmstrip("Red_Pot.png", 128)
-rslider bounds(546, 394, 60, 60) channel("Harm4Formant") range(-10, 10, 0, 1, 1) filmstrip("Blue_Pot.png", 128)
-rslider bounds(546, 440, 60, 60) channel("Harm4Rev")  range(0, 1, 0, 1, 0.1) filmstrip("Yellow_Pot.png", 128)
-button bounds(547, 302, 59, 59) channel("ModeSwitch4") text ("")imgFile("off", "Switch_Off.png"), imgFile("on", "Switch_On.png")
+button bounds(683, 492, 52, 16) channel("HelpButton") text ("")imgFile("off", "./Assets/Help Button.svg"), imgFile("on", "./Assets/Help Button.svg")
 
-vslider bounds(688, 150, 50, 150) channel("SubVol") range(0, 1, 0, 1, 0.001) filmstrip("Fader.png", 201)
-rslider bounds(662, 302, 60, 60) channel("SubPort") range(0.01, 5, 0.01, 1, 0.001) filmstrip("Grey_Pot.png", 128)
-vslider bounds(704, 302, 58, 58) channel("SubOctave") range(1, 2, 1, 1, 1) filmstrip("Vert_Switch1.png", 2)
+vslider bounds(95, 150, 50, 170) channel("DryInputVol") range(0, 2, 1, 1, 0.001) filmstrip("./Assets/Fader.png", 201)
+vslider bounds(227, 150, 50, 170) channel("Harm1Vol") range(0, 1, 0.5, 1, 0.001) filmstrip("./Assets/Fader.png", 201)
+vslider bounds(337, 150, 50, 170) channel("Harm2Vol") range(0, 1, 0.5, 1, 0.001) filmstrip("./Assets/Fader.png", 201)
+vslider bounds(446, 150, 50, 170) channel("Harm3Vol") range(0, 1, 0.5, 1, 0.001) filmstrip("./Assets/Fader.png", 201)
+vslider bounds(556, 150, 50, 170) channel("Harm4Vol") range(0, 1, 0.5, 1, 0.001) filmstrip("./Assets/Fader.png", 201)
+vslider bounds(688, 150, 50, 150) channel("SubVol") range(0, 1, 0, 1, 0.001) filmstrip("./Assets/Fader.png", 201)
+
+button bounds(219, 302, 59, 59) channel("ModeSwitch1") text ("")imgFile("off", "./Assets/Switch_Off.png"), imgFile("on", "./Assets/Switch_On.png")
+rslider bounds(328, 348, 60, 60) channel("Harm2Pan") range(0, 1, 0.75, 1, 0.001) filmstrip("./Assets/Red_Pot.png", 128)
+rslider bounds(436, 394, 60, 60) channel("Harm3Formant") range(-10, 10, 0, 1, 1) filmstrip("./Assets/Blue_Pot.png", 128)
+rslider bounds(546, 440, 60, 60) channel("Harm4Rev")  range(0, 1, 0, 1, 0.1) filmstrip("./Assets/Yellow_Pot.png", 128)
+
+rslider bounds(662, 302, 60, 60) channel("SubPort") range(0.01, 5, 0.01, 1, 0.001) filmstrip("./Assets/Grey_Pot.png", 128)
+vslider bounds(704, 302, 58, 58) channel("SubOctave") range(1, 2, 1, 1, 1) filmstrip("./Assets/Vert_Switch1.png", 2)
+
+rslider bounds(668, 384, 80, 80) channel("ReverbMasterVol") range(0, 1, 0, 1, 0.1) filmstrip("./Assets/Yellow_Pot.png", 128)
+
+button bounds(65, 458, 58, 58) channel("ArpButton") text ("")imgFile("off", "./Assets/Switch_Off.png"), imgFile("on", "./Assets/Switch_On.png")
+rslider bounds(105, 459, 60, 60) channel("ArpSpeed") range(1, 4, 1, 1, 1) filmstrip("./Assets/Grey_Pot.png", 128)
+
 </Cabbage>
 
 <CsoundSynthesizer>
@@ -81,8 +89,8 @@ gaReverbSendR init 0
 gaReverbL init 0
 gaReverbR init 0
 
-giImpulseL ftgen 0, 0, 0, 1, "Chamber 05 Small & Dark L.wav", 0, 0, 0
-giImpulseR ftgen 0, 0, 0, 1, "Chamber 05 Small & Dark R.wav", 0, 0, 0
+giImpulseL ftgen 0, 0, 0, 1, "./Assets/Chamber 05 Small & Dark L.wav", 0, 0, 0
+giImpulseR ftgen 0, 0, 0, 1, "./Assets/Chamber 05 Small & Dark R.wav", 0, 0, 0
 
 instr ReadWidgets
 
@@ -141,6 +149,16 @@ gkHarm3Rev chnget "Harm3Rev"
 gkHarm4Rev chnget "Harm4Rev"
 
 gkReverbMasterVol chnget "ReverbMasterVol"
+
+    kHelpButton chnget "HelpButton"
+    kDimOpacity = (kHelpButton*0.8)
+    
+    S_HelpOpacity sprintfk "alpha(%f)", kHelpButton
+    cabbageSet metro(10), "HelpOverlay",  S_HelpOpacity
+    
+    S_DimOpacity sprintfk "alpha(%f)", kDimOpacity
+    cabbageSet metro(10), "BlackBox",  S_DimOpacity
+    
 
 endin
 
